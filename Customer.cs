@@ -14,7 +14,7 @@ namespace PROJECT
         public DB db = new DB();
 
 
-        public void CustomerRegister(Customer customer)
+        public bool CustomerRegister(Customer customer)
         {
             string register = "insert into Customers(Eposta,Parola,Ad,Soyad,Adres,Created_date) values (@Eposta,@Parola,@Ad,@Soyad,@Adres,@Created_date)";
             
@@ -28,13 +28,11 @@ namespace PROJECT
             cmd.Parameters.AddWithValue("@Adres", customer.Adres);
             cmd.Parameters.AddWithValue("@Created_date", DateTime.Now);
             int i = cmd.ExecuteNonQuery();
-
             db.baglanti().Close();
             if (i != 0)
-            {
-                MessageBox.Show("Kullanıcı Kaydedildi.");
-            }
-        }
+                return true;
+            return false;
+        }   
 
         public bool CustomerLogin(string email,string password)
         {
