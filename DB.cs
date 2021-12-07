@@ -9,7 +9,7 @@ namespace PROJECT
         public SqlConnection baglanti()
         {
             string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;
-            AttachDbFilename=C:\Users\ucrmh\OneDrive\Masaüstü\Proje\PROJECT\Database1.mdf;
+            AttachDbFilename=|DataDirectory|Database1.mdf;
             Integrated Security=True;";
             SqlConnection con = new SqlConnection(conString);
             con.Open();
