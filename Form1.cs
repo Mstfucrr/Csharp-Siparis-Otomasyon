@@ -20,17 +20,17 @@ namespace PROJECT
         private void registerBtn_Click(object sender, EventArgs e)
         {
             Register registerForm = new Register();
-            this.Hide();
             registerForm.Show();
 
         }
 
-        private void BtnLogin_Click(object sender, EventArgs e)
+       
+
+        private void BtnCustomerLogin_Click(object sender, EventArgs e)
         {
-            Customer customer = new Customer();
-            MessageBox.Show(customer.CustomerLogin(TxtEmail.Text, TxtPass.Text)
-                ? "Başarıyla Giriş Yaptınız"
-                : "Eposta veya parola Hatalı");
+            CustomerLoginForm customerLoginForm = new CustomerLoginForm();
+            customerLoginForm.Show();
+
         }
     }
 }
