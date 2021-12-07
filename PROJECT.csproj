@@ -63,6 +63,12 @@
   <ItemGroup>
     <Compile Include="Adress.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="CustomerLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerLoginForm.Designer.cs">
+      <DependentUpon>CustomerLoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -83,6 +89,9 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomerLoginForm.resx">
+      <DependentUpon>CustomerLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,11 +133,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Database1.mdf" />
     <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
   </ItemGroup>
