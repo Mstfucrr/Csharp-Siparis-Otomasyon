@@ -1,13 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -29,15 +20,31 @@ namespace PROJECT
         private void Button_Register_Click(object sender, EventArgs e)
         {
             Customer customer = new Customer();
-            customer.Eposta = TxtBoxEmail.Text;
-            customer.Parola = TxtBoxPass.Text;
-            customer.Ad = TxtBoxAd.Text;
-            customer.Soyad = TxtBoxSoyad.Text;
-            customer.Adres = TxtBoxAdres.Text;
+
+            if (TxtBoxAd.Text.Length == 0 || TxtBoxEmail.Text.Length == 0 || TxtBoxSoyad.Text.Length == 0 ||
+                TxtBoxPass.Text.Length == 0 || TxtBoxAdres.Text.Length == 0)
+            {
+                MessageBox.Show("!!! Lütfen Tüm Boşlukları Doldurduğunuzdan Emin Olun !!!");
+            }
+            else
+            {
+                customer.Eposta = TxtBoxEmail.Text;
+                customer.Parola = TxtBoxPass.Text;
+                customer.Ad = TxtBoxAd.Text;
+                customer.Soyad = TxtBoxSoyad.Text;
+                customer.Adres = TxtBoxAdres.Text;
+
+                if (customer.CustomerRegister(customer))
+                    MessageBox.Show("Başaryıla kayıt oldunuz.");
+                this.Close();
+               
+
+            }
+
+
+
 
             
-
-            customer.CustomerRegister(customer);
 
         }
 
