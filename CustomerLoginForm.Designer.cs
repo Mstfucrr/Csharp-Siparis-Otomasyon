@@ -40,15 +40,16 @@ namespace PROJECT
             // TxtPass
             // 
             this.TxtPass.Location = new System.Drawing.Point(147, 147);
-            this.TxtPass.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TxtPass.Margin = new System.Windows.Forms.Padding(5);
             this.TxtPass.Name = "TxtPass";
             this.TxtPass.Size = new System.Drawing.Size(221, 27);
             this.TxtPass.TabIndex = 9;
+            this.TxtPass.UseSystemPasswordChar = true;
             // 
             // TxtEmail
             // 
             this.TxtEmail.Location = new System.Drawing.Point(147, 96);
-            this.TxtEmail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(5);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(221, 27);
             this.TxtEmail.TabIndex = 8;
@@ -118,7 +119,7 @@ namespace PROJECT
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "CustomerLoginForm";
             this.Text = "Müşteri Girişi";
             this.ResumeLayout(false);

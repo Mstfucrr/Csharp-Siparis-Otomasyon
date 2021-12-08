@@ -20,6 +20,10 @@ namespace PROJECT
                 // Müşteri için Ürünler formu gösterilecek 
 
             }
+            else
+            {
+                MessageBox.Show("Eposta veya parola hatalı.");
+            }
         }
     }
 }
