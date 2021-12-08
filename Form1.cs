@@ -19,7 +19,7 @@ namespace PROJECT
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            Register registerForm = new Register();
+            CustomerRegisterForm registerForm = new CustomerRegisterForm();
             registerForm.Show();
 
         }
@@ -37,6 +37,11 @@ namespace PROJECT
         {
             AdminLoginForm adminLoginForm = new AdminLoginForm();
             adminLoginForm.Show();
+        }
+
+        private void Btn_Quit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
