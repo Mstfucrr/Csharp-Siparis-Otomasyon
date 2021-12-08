@@ -33,5 +33,16 @@ namespace PROJECT.Properties {
                 return ((string)(this["Database1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-DM5KL2SF\\SQLEXPRESS;Initial Catalog=OrderDatabase;Integrated S" +
+            "ecurity=True")]
+        public string OrderDatabaseConnectionString {
+            get {
+                return ((string)(this["OrderDatabaseConnectionString"]));
+            }
+        }
     }
 }
