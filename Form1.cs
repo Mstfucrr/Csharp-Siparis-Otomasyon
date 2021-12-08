@@ -32,5 +32,11 @@ namespace PROJECT
             customerLoginForm.Show();
 
         }
+
+        private void BtnControl_Panel_Click(object sender, EventArgs e)
+        {
+            AdminLoginForm adminLoginForm = new AdminLoginForm();
+            adminLoginForm.Show();
+        }
     }
 }

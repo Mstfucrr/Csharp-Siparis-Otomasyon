@@ -31,6 +31,7 @@ namespace PROJECT
         {
             this.registerBtn = new System.Windows.Forms.Button();
             this.BtnCustomer = new System.Windows.Forms.Button();
+            this.BtnControl_Panel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // registerBtn
@@ -57,11 +58,22 @@ namespace PROJECT
             this.BtnCustomer.UseVisualStyleBackColor = true;
             this.BtnCustomer.Click += new System.EventHandler(this.BtnCustomerLogin_Click);
             // 
+            // BtnControl_Panel
+            // 
+            this.BtnControl_Panel.Location = new System.Drawing.Point(35, 93);
+            this.BtnControl_Panel.Name = "BtnControl_Panel";
+            this.BtnControl_Panel.Size = new System.Drawing.Size(184, 35);
+            this.BtnControl_Panel.TabIndex = 2;
+            this.BtnControl_Panel.Text = "Kontrol Panali";
+            this.BtnControl_Panel.UseVisualStyleBackColor = true;
+            this.BtnControl_Panel.Click += new System.EventHandler(this.BtnControl_Panel_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 398);
+            this.Controls.Add(this.BtnControl_Panel);
             this.Controls.Add(this.BtnCustomer);
             this.Controls.Add(this.registerBtn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -77,6 +89,7 @@ namespace PROJECT
 
         private System.Windows.Forms.Button registerBtn;
         private System.Windows.Forms.Button BtnCustomer;
+        private System.Windows.Forms.Button BtnControl_Panel;
     }
 }
 
