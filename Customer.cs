@@ -14,18 +14,18 @@ namespace PROJECT
         public DB db = new DB();
 
 
-        public bool CustomerRegister(Customer customer)
+        public bool CustomerRegister()
         {
             string register = "insert into Customers(Eposta,Parola,Ad,Soyad,Adres,Created_date) values (@Eposta,@Parola,@Ad,@Soyad,@Adres,@Created_date)";
             
 
             SqlCommand cmd = new SqlCommand(register, db.baglanti());
 
-            cmd.Parameters.AddWithValue("@Eposta", customer.Eposta);
-            cmd.Parameters.AddWithValue("@Parola", customer.Parola);
-            cmd.Parameters.AddWithValue("@Ad", customer.Ad);
-            cmd.Parameters.AddWithValue("@Soyad", customer.Soyad);
-            cmd.Parameters.AddWithValue("@Adres", customer.Adres);
+            cmd.Parameters.AddWithValue("@Eposta", this.Eposta);
+            cmd.Parameters.AddWithValue("@Parola", this.Parola);
+            cmd.Parameters.AddWithValue("@Ad", this.Ad);
+            cmd.Parameters.AddWithValue("@Soyad", this.Soyad);
+            cmd.Parameters.AddWithValue("@Adres", this.Adres);
             cmd.Parameters.AddWithValue("@Created_date", DateTime.Now);
             int i = cmd.ExecuteNonQuery();
             db.baglanti().Close();

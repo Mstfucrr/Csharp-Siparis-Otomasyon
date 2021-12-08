@@ -34,7 +34,7 @@ namespace PROJECT
                 customer.Soyad = TxtBoxSoyad.Text;
                 customer.Adres = TxtBoxAdres.Text;
 
-                if (customer.CustomerRegister(customer))
+                if (customer.CustomerRegister())
                     MessageBox.Show("Başaryıla kayıt oldunuz.");
                 this.Close();
                
