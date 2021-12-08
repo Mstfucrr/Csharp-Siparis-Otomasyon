@@ -29,14 +29,12 @@ namespace PROJECT
             cmd.Parameters.AddWithValue("@Created_date", DateTime.Now);
             int i = cmd.ExecuteNonQuery();
             db.baglanti().Close();
-            if (i != 0)
-                return true;
-            return false;
+            return i != 0;
         }   
 
         public bool CustomerLogin(string email,string password)
         {
-            //string loginQuery = $"Select * From Customers where {email} = @Eposta and Parola = {password}";
+
             string loginQuery = "Select * From Customers where Eposta = @p1 and Parola = @p2";
             SqlCommand cmd = new SqlCommand(loginQuery, db.baglanti());
 
@@ -44,10 +42,7 @@ namespace PROJECT
             cmd.Parameters.AddWithValue("@p2", password);
             SqlDataReader dr = cmd.ExecuteReader();
             db.baglanti().Close();
-            if (dr.Read())
-                return true;
-            return false;
-            
+            return dr.Read();
         }
 
     }
