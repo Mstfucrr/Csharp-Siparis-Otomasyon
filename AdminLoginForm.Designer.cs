@@ -85,6 +85,7 @@ namespace PROJECT
             this.TxtPass.Name = "TxtPass";
             this.TxtPass.Size = new System.Drawing.Size(179, 30);
             this.TxtPass.TabIndex = 4;
+            this.TxtPass.UseSystemPasswordChar = true;
             // 
             // Btn_Login
             // 

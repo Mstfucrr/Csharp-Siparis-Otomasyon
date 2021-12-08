@@ -11,16 +11,15 @@ namespace PROJECT
 
         
 
-        public Admin(string username,string password)
+        public bool AdminCheck(string username,string password)
         {
-
+            // Admin kullanıcı adı ve parolası varsayılan "admin" değeri olacak 
             this.Username = "admin";
             this.Password = "admin";
 
-            MessageBox.Show((this.Username == username && this.Password == password)
-                ? "Başarıyla Giriş Yaptınız"
-                : "Kullanıcı adınız veya Parolanız Hatalı !");
+            return this.Username == username && this.Password == password;
         }
+        
         
     }
 }
