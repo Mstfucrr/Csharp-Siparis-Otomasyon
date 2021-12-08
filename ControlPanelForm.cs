@@ -22,5 +22,17 @@ namespace PROJECT
             CustomerShowForm customerShow = new CustomerShowForm();
             customerShow.Show();
         }
+
+        private void BtnAdd_Product_Click(object sender, EventArgs e)
+        {
+            AddProductForm addProductForm = new AddProductForm();
+            addProductForm.Show();
+        }
+
+        private void BtnUpdate_Product_Click(object sender, EventArgs e)
+        {
+            ProductUpdateAndDeleteForm productUpdateAndDeleteForm = new ProductUpdateAndDeleteForm();
+            productUpdateAndDeleteForm.Show();
+        }
     }
 }

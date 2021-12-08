@@ -31,10 +31,9 @@ namespace PROJECT
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnUpdate_Product = new System.Windows.Forms.Button();
+            this.BtnAdd_Product = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnCustomers_Show = new System.Windows.Forms.Button();
@@ -57,13 +56,40 @@ namespace PROJECT
             // 
             this.panel1.BackColor = System.Drawing.Color.IndianRed;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnUpdate_Product);
+            this.panel1.Controls.Add(this.BtnAdd_Product);
             this.panel1.Location = new System.Drawing.Point(437, 116);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 248);
             this.panel1.TabIndex = 1;
+            // 
+            // BtnUpdate_Product
+            // 
+            this.BtnUpdate_Product.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnUpdate_Product.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnUpdate_Product.Font = new System.Drawing.Font("Bookman Old Style", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnUpdate_Product.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnUpdate_Product.Location = new System.Drawing.Point(49, 112);
+            this.BtnUpdate_Product.Name = "BtnUpdate_Product";
+            this.BtnUpdate_Product.Size = new System.Drawing.Size(137, 70);
+            this.BtnUpdate_Product.TabIndex = 1;
+            this.BtnUpdate_Product.Text = "Güncelle Ve Sil";
+            this.BtnUpdate_Product.UseVisualStyleBackColor = false;
+            this.BtnUpdate_Product.Click += new System.EventHandler(this.BtnUpdate_Product_Click);
+            // 
+            // BtnAdd_Product
+            // 
+            this.BtnAdd_Product.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnAdd_Product.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnAdd_Product.Font = new System.Drawing.Font("Bookman Old Style", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnAdd_Product.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnAdd_Product.Location = new System.Drawing.Point(60, 25);
+            this.BtnAdd_Product.Name = "BtnAdd_Product";
+            this.BtnAdd_Product.Size = new System.Drawing.Size(111, 43);
+            this.BtnAdd_Product.TabIndex = 0;
+            this.BtnAdd_Product.Text = "Ekle";
+            this.BtnAdd_Product.UseVisualStyleBackColor = false;
+            this.BtnAdd_Product.Click += new System.EventHandler(this.BtnAdd_Product_Click);
             // 
             // label2
             // 
@@ -74,45 +100,6 @@ namespace PROJECT
             this.label2.Size = new System.Drawing.Size(105, 27);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ürünler";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Bookman Old Style", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(60, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 43);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Ekle";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Bookman Old Style", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(49, 85);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 43);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Güncelle";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Bookman Old Style", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(60, 152);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 43);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Sil";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -174,9 +161,8 @@ namespace PROJECT
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnUpdate_Product;
+        private System.Windows.Forms.Button BtnAdd_Product;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
