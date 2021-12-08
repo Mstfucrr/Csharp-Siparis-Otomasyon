@@ -9,13 +9,10 @@ namespace PROJECT
     {
         public SqlConnection baglanti()
         {
-            string enviroment = System.Environment.CurrentDirectory;
-            AppDomain.CurrentDomain.SetData("DataDirectory", Directory.GetParent(enviroment).Parent.FullName);
-            string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;
-            AttachDbFilename=|DataDirectory|\Database1.mdf;
-            Integrated Security=True;";
+            string conString = @"Data Source=LAPTOP-DM5KL2SF\SQLEXPRESS;Initial Catalog=OrderDatabase;Integrated Security=True";
             SqlConnection con = new SqlConnection(conString);
             con.Open();
+            //Data Source=LAPTOP-DM5KL2SF\SQLEXPRESS;Initial Catalog=OrderDatabase;Integrated Security=True
             return con;
         }
           
