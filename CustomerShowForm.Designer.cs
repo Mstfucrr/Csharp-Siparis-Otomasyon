@@ -35,31 +35,31 @@ namespace PROJECT
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.customerDataSet = new PROJECT.CustomerDataSet();
-            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customersTableAdapter = new PROJECT.CustomerDataSetTableAdapters.CustomersTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.epostaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createddateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerDataSet = new PROJECT.CustomerDataSet();
+            this.customersTableAdapter = new PROJECT.CustomerDataSetTableAdapters.CustomersTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Cyan;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkRed;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cyan;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -75,41 +75,28 @@ namespace PROJECT
             this.createddateDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.customersBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Aquamarine;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Cyan;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 100);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Cyan;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.DarkCyan;
-            this.dataGridView1.Size = new System.Drawing.Size(647, 158);
+            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Cyan;
+            this.dataGridView1.Size = new System.Drawing.Size(644, 158);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // customerDataSet
-            // 
-            this.customerDataSet.DataSetName = "CustomerDataSet";
-            this.customerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customersBindingSource
-            // 
-            this.customersBindingSource.DataMember = "Customers";
-            this.customersBindingSource.DataSource = this.customerDataSet;
-            // 
-            // customersTableAdapter
-            // 
-            this.customersTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -117,36 +104,58 @@ namespace PROJECT
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 50;
             // 
             // adDataGridViewTextBoxColumn
             // 
             this.adDataGridViewTextBoxColumn.DataPropertyName = "Ad";
             this.adDataGridViewTextBoxColumn.HeaderText = "Ad";
             this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
+            this.adDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // soyadDataGridViewTextBoxColumn
             // 
             this.soyadDataGridViewTextBoxColumn.DataPropertyName = "Soyad";
             this.soyadDataGridViewTextBoxColumn.HeaderText = "Soyad";
             this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
+            this.soyadDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // adresDataGridViewTextBoxColumn
             // 
             this.adresDataGridViewTextBoxColumn.DataPropertyName = "Adres";
             this.adresDataGridViewTextBoxColumn.HeaderText = "Adres";
             this.adresDataGridViewTextBoxColumn.Name = "adresDataGridViewTextBoxColumn";
+            this.adresDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // epostaDataGridViewTextBoxColumn
             // 
             this.epostaDataGridViewTextBoxColumn.DataPropertyName = "Eposta";
             this.epostaDataGridViewTextBoxColumn.HeaderText = "Eposta";
             this.epostaDataGridViewTextBoxColumn.Name = "epostaDataGridViewTextBoxColumn";
+            this.epostaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.epostaDataGridViewTextBoxColumn.Width = 120;
             // 
             // createddateDataGridViewTextBoxColumn
             // 
             this.createddateDataGridViewTextBoxColumn.DataPropertyName = "Created_date";
             this.createddateDataGridViewTextBoxColumn.HeaderText = "Katılma Tarihi";
             this.createddateDataGridViewTextBoxColumn.Name = "createddateDataGridViewTextBoxColumn";
+            this.createddateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.createddateDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataMember = "Customers";
+            this.customersBindingSource.DataSource = this.customerDataSet;
+            // 
+            // customerDataSet
+            // 
+            this.customerDataSet.DataSetName = "CustomerDataSet";
+            this.customerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customersTableAdapter
+            // 
+            this.customersTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -164,15 +173,15 @@ namespace PROJECT
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(686, 372);
+            this.ClientSize = new System.Drawing.Size(703, 372);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "CustomerShowForm";
             this.Text = "Müşteri Görüntüle";
             this.Load += new System.EventHandler(this.CustomerShowForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,12 +192,12 @@ namespace PROJECT
         private CustomerDataSet customerDataSet;
         private System.Windows.Forms.BindingSource customersBindingSource;
         private CustomerDataSetTableAdapters.CustomersTableAdapter customersTableAdapter;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn soyadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn epostaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn createddateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
     }
 }
