@@ -19,7 +19,8 @@ namespace PROJECT
 
         private void BtnCustomers_Show_Click(object sender, EventArgs e)
         {
-
+            CustomerShowForm customerShow = new CustomerShowForm();
+            customerShow.Show();
         }
     }
 }
