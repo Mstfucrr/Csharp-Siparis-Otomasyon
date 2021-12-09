@@ -19,8 +19,10 @@ namespace PROJECT
 
         private void ProductUpdateAndDeleteForm_Load(object sender, EventArgs e)
         {
+            Product product = new Product();
+            dataGridView1.DataSource = product.GetProducts();
             // TODO: Bu kod satırı 'productDataSet.Products' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            this.productsTableAdapter.Fill(this.productDataSet.Products);
+            //this.productsTableAdapter.Fill(this.productDataSet.Products);
 
         }
 
@@ -58,7 +60,9 @@ namespace PROJECT
                     TxtTanim.Text,Convert.ToSingle(TxtAgirlik.Text)))
                 {
                     MessageBox.Show("Ürün başarıyla güncellendi");
-                    this.productsTableAdapter.Fill(this.productDataSet.Products);//Datagrid Yenileme
+                    dataGridView1.DataSource = product.GetProducts();
+
+
                 }
                 else
                 {
@@ -73,7 +77,7 @@ namespace PROJECT
             if (product.DeleteProduct(id))
             {
                 MessageBox.Show("Ürün başarıyla silindi"); 
-                this.productsTableAdapter.Fill(this.productDataSet.Products);//Datagrid Yenileme
+                dataGridView1.DataSource = product.GetProducts();
                 TxtAd.Text = "";
                 TxtAgirlik.Text = "";
                 TxtFiyat.Text = "";

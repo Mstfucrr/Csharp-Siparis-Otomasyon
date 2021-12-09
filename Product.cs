@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace PROJECT
@@ -10,6 +11,18 @@ namespace PROJECT
         public float Agirlik { get; set; }
         public float BirimFiyat { get; set; }
 
+        private DB db = new DB();
+
+        public DataTable GetProducts()
+        {
+            string get = "Select * From Products";
+            SqlCommand cmd = new SqlCommand(get,db.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            db.baglanti().Close();
+            return dt;
+        }
 
         public bool AddProduct()
         {
