@@ -11,6 +11,17 @@ namespace PROJECT
         public float Agirlik { get; set; }
         public float BirimFiyat { get; set; }
 
+        public float getPriceForQuantity()
+        {
+            return this.BirimFiyat;
+        }
+
+        public float getWeight()
+        {
+            return this.Agirlik;
+        }
+
+
         private DB db = new DB();
 
         public DataTable GetProducts()
