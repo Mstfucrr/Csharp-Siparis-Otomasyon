@@ -19,8 +19,8 @@ namespace PROJECT
 
         private void CustomerShowForm_Load(object sender, EventArgs e)
         {
-            // TODO: Bu kod satırı 'customerDataSet.Customers' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            this.customersTableAdapter.Fill(this.customerDataSet.Customers);
+            Customer customer = new Customer();
+            dataGridView1.DataSource = customer.GetCustomers();
         }
     }
 }

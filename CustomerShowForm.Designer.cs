@@ -35,12 +35,6 @@ namespace PROJECT
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.epostaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createddateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerDataSet = new PROJECT.CustomerDataSet();
             this.customersTableAdapter = new PROJECT.CustomerDataSetTableAdapters.CustomersTableAdapter();
@@ -54,7 +48,6 @@ namespace PROJECT
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Cyan;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkRed;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -66,14 +59,6 @@ namespace PROJECT
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.adDataGridViewTextBoxColumn,
-            this.soyadDataGridViewTextBoxColumn,
-            this.adresDataGridViewTextBoxColumn,
-            this.epostaDataGridViewTextBoxColumn,
-            this.createddateDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.customersBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Cyan;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -97,51 +82,6 @@ namespace PROJECT
             this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Cyan;
             this.dataGridView1.Size = new System.Drawing.Size(644, 158);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // adDataGridViewTextBoxColumn
-            // 
-            this.adDataGridViewTextBoxColumn.DataPropertyName = "Ad";
-            this.adDataGridViewTextBoxColumn.HeaderText = "Ad";
-            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
-            this.adDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // soyadDataGridViewTextBoxColumn
-            // 
-            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "Soyad";
-            this.soyadDataGridViewTextBoxColumn.HeaderText = "Soyad";
-            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
-            this.soyadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adresDataGridViewTextBoxColumn
-            // 
-            this.adresDataGridViewTextBoxColumn.DataPropertyName = "Adres";
-            this.adresDataGridViewTextBoxColumn.HeaderText = "Adres";
-            this.adresDataGridViewTextBoxColumn.Name = "adresDataGridViewTextBoxColumn";
-            this.adresDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // epostaDataGridViewTextBoxColumn
-            // 
-            this.epostaDataGridViewTextBoxColumn.DataPropertyName = "Eposta";
-            this.epostaDataGridViewTextBoxColumn.HeaderText = "Eposta";
-            this.epostaDataGridViewTextBoxColumn.Name = "epostaDataGridViewTextBoxColumn";
-            this.epostaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.epostaDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // createddateDataGridViewTextBoxColumn
-            // 
-            this.createddateDataGridViewTextBoxColumn.DataPropertyName = "Created_date";
-            this.createddateDataGridViewTextBoxColumn.HeaderText = "Katılma Tarihi";
-            this.createddateDataGridViewTextBoxColumn.Name = "createddateDataGridViewTextBoxColumn";
-            this.createddateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.createddateDataGridViewTextBoxColumn.Width = 130;
             // 
             // customersBindingSource
             // 
@@ -193,11 +133,5 @@ namespace PROJECT
         private System.Windows.Forms.BindingSource customersBindingSource;
         private CustomerDataSetTableAdapters.CustomersTableAdapter customersTableAdapter;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soyadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adresDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn epostaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn createddateDataGridViewTextBoxColumn;
     }
 }

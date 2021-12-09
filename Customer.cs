@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -11,8 +12,19 @@ namespace PROJECT
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public string Adres { get; set; }
-        public DB db = new DB();
+        private DB db = new DB();
 
+
+        public DataTable GetCustomers()
+        {
+            string get = "Select Ad,Soyad,Adres,Eposta,Created_date From Customers";
+            SqlCommand cmd = new SqlCommand(get, db.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            db.baglanti().Close();
+            return dt;
+        }
 
         public bool CustomerRegister()
         {
