@@ -76,7 +76,7 @@ namespace PROJECT
             this.BtnControl_Panel.Name = "BtnControl_Panel";
             this.BtnControl_Panel.Size = new System.Drawing.Size(179, 128);
             this.BtnControl_Panel.TabIndex = 2;
-            this.BtnControl_Panel.Text = "Kontrol Panali";
+            this.BtnControl_Panel.Text = "Kontrol Paneli";
             this.BtnControl_Panel.UseVisualStyleBackColor = false;
             this.BtnControl_Panel.Click += new System.EventHandler(this.BtnControl_Panel_Click);
             // 
