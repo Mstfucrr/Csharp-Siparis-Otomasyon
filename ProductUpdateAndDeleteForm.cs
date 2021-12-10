@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PROJECT
@@ -20,9 +13,13 @@ namespace PROJECT
         private void ProductUpdateAndDeleteForm_Load(object sender, EventArgs e)
         {
             Product product = new Product();
-            dataGridView1.DataSource = product.GetProducts();
+            dataGridView1.DataSource = product.GetProducts("*");
             // TODO: Bu kod satırı 'productDataSet.Products' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             //this.productsTableAdapter.Fill(this.productDataSet.Products);
+            DataGridViewColumn idcolumn = dataGridView1.Columns[0];
+            idcolumn.Width = 30;
+            DataGridViewColumn dateColumn = dataGridView1.Columns[5];
+            dateColumn.HeaderText = "Eklenme Tarihi";
 
         }
 
@@ -32,15 +29,10 @@ namespace PROJECT
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                id = Convert.ToInt32(row.Cells[0].Value);
-                string Ad = row.Cells[1].Value.ToString();
-                float BirimFiyati = Convert.ToSingle(row.Cells[2].Value);
-                string Tanim = row.Cells[3].Value.ToString();
-                float Agirlik= Convert.ToSingle(row.Cells[4].Value);
-                TxtAd.Text = Ad;
-                TxtAgirlik.Text = Agirlik.ToString();
-                TxtFiyat.Text = BirimFiyati.ToString();
-                TxtTanim.Text = Tanim;
+                TxtAd.Text = row.Cells[1].Value.ToString();
+                TxtAgirlik.Text = Convert.ToSingle(row.Cells[4].Value).ToString();
+                TxtFiyat.Text = Convert.ToSingle(row.Cells[2].Value).ToString();
+                TxtTanim.Text = row.Cells[3].Value.ToString();
 
             }
 
@@ -55,14 +47,11 @@ namespace PROJECT
             }
             else
             {
-                
                 if (product.UpdateProduct(id,TxtAd.Text,Convert.ToSingle(TxtFiyat.Text),
                     TxtTanim.Text,Convert.ToSingle(TxtAgirlik.Text)))
                 {
                     MessageBox.Show("Ürün başarıyla güncellendi");
-                    dataGridView1.DataSource = product.GetProducts();
-
-
+                    dataGridView1.DataSource = product.GetProducts("*");
                 }
                 else
                 {
@@ -77,7 +66,7 @@ namespace PROJECT
             if (product.DeleteProduct(id))
             {
                 MessageBox.Show("Ürün başarıyla silindi"); 
-                dataGridView1.DataSource = product.GetProducts();
+                dataGridView1.DataSource = product.GetProducts("*");
                 TxtAd.Text = "";
                 TxtAgirlik.Text = "";
                 TxtFiyat.Text = "";
