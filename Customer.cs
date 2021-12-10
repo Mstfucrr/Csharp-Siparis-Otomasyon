@@ -7,6 +7,7 @@ namespace PROJECT
 {
     class Customer
     {
+        public int CustomerId { get; set; }
         public string Parola { get; set; }
         public string Eposta { get; set; }
         public string Ad { get; set; }
@@ -49,12 +50,22 @@ namespace PROJECT
 
             string loginQuery = "Select * From Customers where Eposta = @p1 and Parola = @p2";
             SqlCommand cmd = new SqlCommand(loginQuery, db.baglanti());
-
+            
             cmd.Parameters.AddWithValue("@p1", email);
             cmd.Parameters.AddWithValue("@p2", password);
             SqlDataReader dr = cmd.ExecuteReader();
             db.baglanti().Close();
-            return dr.Read();
+            if (dr.Read())
+            {
+                this.CustomerId = Convert.ToInt32(dr[0]);
+                this.Ad = dr[1].ToString();
+                this.Soyad = dr[2].ToString();
+                this.Adres = dr[3].ToString();
+                this.Eposta = dr[4].ToString();
+                return true;
+            }
+
+            return false;
         }
 
     }
