@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace PROJECT
 {
-    class Product
+    public class Product
     {
         public string Ad { get; set; }
         public string Tanim { get; set; }
@@ -22,11 +22,24 @@ namespace PROJECT
         }
 
 
+
         private DB db = new DB();
 
-        public DataTable GetProducts()
+        public SqlDataReader GetProductWithQueryandID(string query,int productId)
         {
-            string get = "Select * From Products";
+
+            string get = "Select "+query+" From Products where id=@id";
+
+            SqlCommand cmd = new SqlCommand(get, db.baglanti());
+            cmd.Parameters.AddWithValue("@id",productId);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            return reader;
+        }
+
+        public DataTable GetProducts(string sorgu)
+        {
+            string get = "Select "+sorgu+" From Products";
             SqlCommand cmd = new SqlCommand(get,db.baglanti());
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -53,6 +66,10 @@ namespace PROJECT
         public bool UpdateProduct(int id,string Ad, float BirimFiyat,string Tanim,float Agirlik)
         {
             DB db = new DB();
+            this.Ad = Ad;
+            this.Agirlik = Agirlik;
+            this.BirimFiyat = BirimFiyat;
+            this.Tanim = Tanim;
 
             string UpdateString = "update Products set Ad=@Ad,BirimFiyat=@BirimFiyat,Tanim=@Tanim,Agirlik=@Agirlik where id=@id";
             SqlCommand cmd = new SqlCommand(UpdateString,db.baglanti());
