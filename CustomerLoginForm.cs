@@ -18,7 +18,8 @@ namespace PROJECT
                 MessageBox.Show("Başarıyla giriş Yaptınız");
                 this.Close();
                 // Müşteri için Ürünler formu gösterilecek 
-
+                OrderForm orderForm = new OrderForm(customer.CustomerId);
+                orderForm.Show();
             }
             else
             {
