@@ -4,11 +4,12 @@ namespace PROJECT
 {
     class PaymentCash:Payment
     {
-        public float cashTendered { get => base.Amount; }
-
-        public PaymentCash()
+        private float cashTendered { get; set; }
+        
+        public string PaymentCashConfirm()
         {
-            MessageBox.Show("Kargo yolda\nÖdeme tutarı : " + cashTendered);
+            this.cashTendered = base.Amount;
+            return ("Kargo yolda\nÖdeme tutarı : " + cashTendered);
         }
     }
 }
