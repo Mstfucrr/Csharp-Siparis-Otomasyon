@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace PROJECT
@@ -62,12 +61,18 @@ namespace PROJECT
 
         private void Add_Basket_Click(object sender, EventArgs e)
         {
+            
             SqlDataReader reader = product.GetProductWithQueryandID("*",Productid);
             if (reader.Read())
             {
+                product.Ad = reader[1].ToString();
+                product.BirimFiyat = Convert.ToSingle(reader[2]);
+                product.Tanim = reader[3].ToString();
+                product.Agirlik = Convert.ToSingle(reader[4]);
+
                 ListName.Items.Add(reader[1].ToString());
-                ListPrice.Items.Add(reader[2] + " x " +quantity.Text);
-                ListWeight.Items.Add(reader[4].ToString());
+                ListPrice.Items.Add(product.getPriceForQuantity() + " x " +quantity.Text);
+                ListWeight.Items.Add(product.getWeight());
             }
             
             OrderDetail orderDetail = new OrderDetail();
@@ -97,8 +102,15 @@ namespace PROJECT
                     
                     if (comboBox1.SelectedItem.ToString() == "Nakit")
                     {
-                        MessageBox.Show("Kargo yolda\nHayırlı olsun.");
+                        
+                        PaymentCash cash = new PaymentCash();
+                        cash.Amount = order.calcTotal();
+                        MessageBox.Show(cash.PaymentCashConfirm());
                         // Sipariş db'ye eklenecek
+                    }
+                    else if (comboBox1.SelectedItem.ToString() == "Kredi Kartı")
+                    {
+                        // kredi kartı formu eklenecek   
                     }
                     //Ödeme yöntemi formu ve Sepete eklenenler Formu gelecek
                     // kredi kartı veya çek ödeme işlemi tamamlandıktan sonra Sipariş db'ye kaydedilecek 
