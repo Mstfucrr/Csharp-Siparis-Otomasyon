@@ -79,7 +79,7 @@ namespace PROJECT
             cmd.Parameters.AddWithValue("@Tanim",Tanim);
             cmd.Parameters.AddWithValue("@Agirlik",Agirlik);
             int i = cmd.ExecuteNonQuery();
-            
+            db.baglanti().Close();
             return i != 0;
         }
 
