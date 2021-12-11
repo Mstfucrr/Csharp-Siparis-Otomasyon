@@ -20,6 +20,8 @@ namespace PROJECT
             idcolumn.Width = 30;
             DataGridViewColumn dateColumn = dataGridView1.Columns[5];
             dateColumn.HeaderText = "Eklenme Tarihi";
+            BtnDelete_Product.Enabled = false;
+            BtnUpdate_Product.Enabled = false;
 
         }
 
@@ -28,7 +30,13 @@ namespace PROJECT
         {
             if (e.RowIndex >= 0)
             {
+                if (!BtnDelete_Product.Enabled && !BtnUpdate_Product.Enabled)
+                {
+                    BtnUpdate_Product.Enabled = true;
+                    BtnDelete_Product.Enabled = true;
+                }
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                id = Convert.ToInt32(row.Cells[0].Value.ToString());
                 TxtAd.Text = row.Cells[1].Value.ToString();
                 TxtAgirlik.Text = Convert.ToSingle(row.Cells[4].Value).ToString();
                 TxtFiyat.Text = Convert.ToSingle(row.Cells[2].Value).ToString();
@@ -63,18 +71,24 @@ namespace PROJECT
         private void BtnDelete_Product_Click(object sender, EventArgs e)
         {
             Product product = new Product();
-            if (product.DeleteProduct(id))
+            
+            DialogResult dialogResult = MessageBox.Show("Silmek istediğinize emin misiniz? ", "Sil", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show("Ürün başarıyla silindi"); 
-                dataGridView1.DataSource = product.GetProducts("*");
-                TxtAd.Text = "";
-                TxtAgirlik.Text = "";
-                TxtFiyat.Text = "";
-                TxtTanim.Text = "";
-            }
-            else
-            {
-                MessageBox.Show("Ürün silinirken bir hata oluştu !");
+                if (product.DeleteProduct(id))
+                {
+                    MessageBox.Show("Ürün başarıyla silindi");
+                    dataGridView1.DataSource = product.GetProducts("*");
+                    TxtAd.Text = "";
+                    TxtAgirlik.Text = "";
+                    TxtFiyat.Text = "";
+                    TxtTanim.Text = "";
+                }
+                
+                else
+                {
+                    MessageBox.Show("Ürün silinirken bir hata oluştu !");
+                }
             }
         }
     }
