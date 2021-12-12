@@ -17,7 +17,7 @@ namespace PROJECT
             return cartType + " Kart Bilgileri" +
                    "\n\tNumarası : " + this.cartNumber +
                    "\n\tSahibi : " + this.cartOwner +
-                   "\n\tSon Ödeme Tarihi : " + this.CartExpDateTime +
+                   "\n\tSon Ödeme Tarihi : " + this.CartExpDateTime.Month + " / " + this.CartExpDateTime.Year +
                    "\nKart ile ödeme işlemi tamamlandı.";
 
         }
