@@ -34,6 +34,7 @@ namespace PROJECT
             cmd.Parameters.AddWithValue("@id",productId);
             SqlDataReader reader = cmd.ExecuteReader();
 
+            db.baglanti().Close();
             return reader;
         }
 
@@ -59,6 +60,7 @@ namespace PROJECT
             cmd.Parameters.AddWithValue("@Tanim",this.Tanim);
             cmd.Parameters.AddWithValue("@Upload_date", DateTime.Now);
             int i = cmd.ExecuteNonQuery();
+            db.baglanti().Close();
 
             return i != 0;
         }
@@ -90,6 +92,7 @@ namespace PROJECT
             SqlCommand cmd = new SqlCommand(DeleteString,db.baglanti());
             cmd.Parameters.AddWithValue("@id", id);
             int i = cmd.ExecuteNonQuery();
+            db.baglanti().Close();
 
             return i != 0;
         }

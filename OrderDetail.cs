@@ -9,9 +9,8 @@ namespace PROJECT
         public int Quantity { get; set; }
         public float TaxStatus = 0.18F;
         public int ProductId;
-        public Product product = new Product();
+        private Product product = new Product();
 
-        DB db = new DB();
 
         public float CalcSubTotal()
         {
