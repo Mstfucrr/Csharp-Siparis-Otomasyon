@@ -9,7 +9,13 @@ namespace PROJECT
         public int Quantity { get; set; }
         public float TaxStatus = 0.18F;
         public int ProductId;
+        public int OrderId;
         private Product product = new Product();
+
+        public OrderDetail(int orderId)
+        {
+            this.OrderId = orderId;
+        }
 
 
         public float CalcSubTotal()
@@ -33,7 +39,7 @@ namespace PROJECT
         {
             SqlDataReader reader = product.GetProductWithQueryandID("Agirlik", this.ProductId);
             if (reader.Read())
-                return Quantity * Convert.ToSingle(reader[0]);
+                return Quantity * Convert.ToSingle(reader[0]);//Ağırlığı
             return 1;
         }
     }
