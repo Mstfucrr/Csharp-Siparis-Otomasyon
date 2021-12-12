@@ -8,6 +8,7 @@ namespace PROJECT
     {
         public Order order;
         public DB db;
+        public int OrderId { get; set; }
         Product product = new Product();
 
         public OrderForm(int customerId)
@@ -74,8 +75,10 @@ namespace PROJECT
                 ListPrice.Items.Add(product.getPriceForQuantity() + " x " +quantity.Text);
                 ListWeight.Items.Add(product.getWeight()+ " x " +quantity.Text);
             }
-            
-            OrderDetail orderDetail = new OrderDetail();
+
+            OrderId = order.getOrderId();
+
+            OrderDetail orderDetail = new OrderDetail(OrderId);
             orderDetail.ProductId = Productid;
             orderDetail.Quantity = Convert.ToInt32(quantity.Text);
             
@@ -100,24 +103,36 @@ namespace PROJECT
                 DialogResult dialogResult = MessageBox.Show(comboBox1.SelectedItem+" ödeme\nÖdenecek tutar : "+order.calcTotal()+"\nSepeti onaylıyor musunuz ?", "Onay", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes && comboBox1.SelectedIndex >= 0)
                 {
-                    
+                    //ödeme yöntemi seçilip sepet onaylandığında order TotalWeight,TotalAmount,Paymet güncelleniyor   
                     if (comboBox1.SelectedItem.ToString() == "Nakit")
                     {
-                        
+                        order.Payment = "Nakit";
+                        order.Status = true;
+                        order.UpdateOrderDb();//ödeme yöntemi seçilip sepet onaylandığında order TotalWeight,TotalAmount,Paymet güncelleniyor   
+
                         PaymentCash cash = new PaymentCash();
                         cash.Amount = order.calcTotal();
-                        order.Payment = "Nakit";
                         MessageBox.Show(cash.PaymentCashConfirm());
+                        OrderForm form = new OrderForm(order.CustomerId);
+                        form.Show();
+                        this.Close();
                         // Sipariş db'ye eklenecek
+                    }
+                    else if (comboBox1.SelectedItem.ToString() == "Kredi Kartı")
+                    {
+                        order.Payment = "Kredi Kartı";
+                        order.UpdateOrderDb();//ödeme yöntemi seçilip sepet onaylandığında order TotalWeight,TotalAmount,Paymet güncelleniyor   
+                        PaymentCreditForm paymentCreditForm = new PaymentCreditForm();
+                        paymentCreditForm.Show();
                     }
                     else
                     {
+                        order.Payment = "Çek";
+                        order.UpdateOrderDb();//ödeme yöntemi seçilip sepet onaylandığında order TotalWeight,TotalAmount,Paymet güncelleniyor   
 
-                        PaymentForm paymentForm = new PaymentForm();
-                        paymentForm.Show();
+                        PaymentCheckForm paymentCheckForm = new PaymentCheckForm();
+                        paymentCheckForm.Show();
                     }
-                    //Ödeme yöntemi formu ve Sepete eklenenler Formu gelecek
-                    // kredi kartı veya çek ödeme işlemi tamamlandıktan sonra Sipariş db'ye kaydedilecek 
                 }
             }
             else

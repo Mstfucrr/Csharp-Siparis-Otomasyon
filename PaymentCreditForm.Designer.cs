@@ -31,6 +31,8 @@ namespace PROJECT
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentCreditForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.LblDateYY = new System.Windows.Forms.Label();
             this.LblCardNumber = new System.Windows.Forms.Label();
             this.LblCardName = new System.Windows.Forms.Label();
             this.LblDateAA = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@ namespace PROJECT
             this.CboxYY = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.LblDateYY = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicVisa_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaster_Logo)).BeginInit();
@@ -69,6 +69,30 @@ namespace PROJECT
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(347, 215);
             this.panel1.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(65, 169);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(12, 17);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "/";
+            // 
+            // LblDateYY
+            // 
+            this.LblDateYY.AutoSize = true;
+            this.LblDateYY.BackColor = System.Drawing.Color.Transparent;
+            this.LblDateYY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblDateYY.ForeColor = System.Drawing.Color.Black;
+            this.LblDateYY.Location = new System.Drawing.Point(74, 169);
+            this.LblDateYY.Name = "LblDateYY";
+            this.LblDateYY.Size = new System.Drawing.Size(26, 17);
+            this.LblDateYY.TabIndex = 14;
+            this.LblDateYY.Text = "YY";
             // 
             // LblCardNumber
             // 
@@ -148,8 +172,7 @@ namespace PROJECT
             this.CboxCardType.FormattingEnabled = true;
             this.CboxCardType.Items.AddRange(new object[] {
             "Visa",
-            "MasterCard",
-            "PayPal"});
+            "MasterCard"});
             this.CboxCardType.Location = new System.Drawing.Point(45, 274);
             this.CboxCardType.Name = "CboxCardType";
             this.CboxCardType.Size = new System.Drawing.Size(122, 28);
@@ -280,30 +303,6 @@ namespace PROJECT
             this.label5.TabIndex = 21;
             this.label5.Text = "Kart Tipi";
             // 
-            // LblDateYY
-            // 
-            this.LblDateYY.AutoSize = true;
-            this.LblDateYY.BackColor = System.Drawing.Color.Transparent;
-            this.LblDateYY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblDateYY.ForeColor = System.Drawing.Color.Black;
-            this.LblDateYY.Location = new System.Drawing.Point(74, 169);
-            this.LblDateYY.Name = "LblDateYY";
-            this.LblDateYY.Size = new System.Drawing.Size(26, 17);
-            this.LblDateYY.TabIndex = 14;
-            this.LblDateYY.Text = "YY";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(65, 169);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(12, 17);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "/";
-            // 
             // PaymentCreditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,7 +321,6 @@ namespace PROJECT
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CboxCardType);
             this.Controls.Add(this.TxtCardNumber);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PaymentCreditForm";
             this.Text = "Kredi Kartı ile öde";
             this.panel1.ResumeLayout(false);

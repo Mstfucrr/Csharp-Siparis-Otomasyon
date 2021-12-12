@@ -31,8 +31,8 @@ namespace PROJECT
         {
             this.Panel_Payment = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,19 +58,6 @@ namespace PROJECT
             this.panel1.Size = new System.Drawing.Size(734, 51);
             this.panel1.TabIndex = 5;
             // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.Location = new System.Drawing.Point(21, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 33);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Kredi Kartı";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.BtnCreditMenuItem);
-            // 
             // button2
             // 
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
@@ -88,6 +75,19 @@ namespace PROJECT
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.BtnCheckMenuItem);
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button1.Location = new System.Drawing.Point(21, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 33);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Kredi Kartı";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BtnCreditMenuItem);
+            // 
             // PaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +96,8 @@ namespace PROJECT
             this.Controls.Add(this.Panel_Payment);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PaymentForm";
             this.Text = "Ödeme";
             this.Load += new System.EventHandler(this.PaymentForm_Load);
