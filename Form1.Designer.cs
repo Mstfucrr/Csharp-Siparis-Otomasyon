@@ -39,7 +39,7 @@ namespace PROJECT
             // 
             // registerBtn
             // 
-            this.registerBtn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.registerBtn.BackColor = System.Drawing.Color.LightSkyBlue;
             this.registerBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -54,7 +54,7 @@ namespace PROJECT
             // 
             // BtnCustomer
             // 
-            this.BtnCustomer.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BtnCustomer.BackColor = System.Drawing.Color.LightSkyBlue;
             this.BtnCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -69,7 +69,7 @@ namespace PROJECT
             // 
             // BtnControl_Panel
             // 
-            this.BtnControl_Panel.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BtnControl_Panel.BackColor = System.Drawing.Color.LightSkyBlue;
             this.BtnControl_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnControl_Panel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnControl_Panel.Location = new System.Drawing.Point(3, 137);
@@ -96,7 +96,7 @@ namespace PROJECT
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkCyan;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.LightCyan;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -117,7 +117,7 @@ namespace PROJECT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkCyan;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(505, 398);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));

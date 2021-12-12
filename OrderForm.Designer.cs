@@ -50,6 +50,7 @@ namespace PROJECT
             this.TxtAd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.LblAmount = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -62,7 +63,11 @@ namespace PROJECT
             this.ListPrice = new System.Windows.Forms.ListBox();
             this.ListName = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.LblWeight = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataSetBindingSource)).BeginInit();
@@ -107,7 +112,7 @@ namespace PROJECT
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.LightCyan;
             this.label1.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(641, 9);
+            this.label1.Location = new System.Drawing.Point(19, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 24);
             this.label1.TabIndex = 3;
@@ -119,6 +124,7 @@ namespace PROJECT
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.quantity);
             this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.BtnAdd_Basket);
             this.panel1.Controls.Add(this.TxtTanim);
             this.panel1.Controls.Add(this.label5);
@@ -129,9 +135,9 @@ namespace PROJECT
             this.panel1.Controls.Add(this.TxtAd);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Font = new System.Drawing.Font("Bahnschrift Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panel1.Location = new System.Drawing.Point(621, 29);
+            this.panel1.Location = new System.Drawing.Point(639, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(257, 346);
+            this.panel1.Size = new System.Drawing.Size(257, 366);
             this.panel1.TabIndex = 4;
             // 
             // quantity
@@ -262,6 +268,11 @@ namespace PROJECT
             // 
             this.panel2.BackColor = System.Drawing.Color.LightCyan;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.LblWeight);
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.LblAmount);
@@ -274,10 +285,23 @@ namespace PROJECT
             this.panel2.Controls.Add(this.ListWeight);
             this.panel2.Controls.Add(this.ListPrice);
             this.panel2.Controls.Add(this.ListName);
-            this.panel2.Location = new System.Drawing.Point(31, 293);
+            this.panel2.Location = new System.Drawing.Point(15, 321);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(584, 209);
+            this.panel2.Size = new System.Drawing.Size(584, 240);
             this.panel2.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Crimson;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(331, 203);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 30);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Sepeti Kaldır";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Btn_RemoveBasket_Click);
             // 
             // comboBox1
             // 
@@ -287,7 +311,7 @@ namespace PROJECT
             "Nakit",
             "Kredi Kartı",
             "Çek"});
-            this.comboBox1.Location = new System.Drawing.Point(162, 167);
+            this.comboBox1.Location = new System.Drawing.Point(159, 203);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(128, 24);
             this.comboBox1.TabIndex = 13;
@@ -338,7 +362,7 @@ namespace PROJECT
             this.BtnConfirmBasket.BackColor = System.Drawing.Color.SpringGreen;
             this.BtnConfirmBasket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConfirmBasket.Font = new System.Drawing.Font("SimSun", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnConfirmBasket.Location = new System.Drawing.Point(22, 159);
+            this.BtnConfirmBasket.Location = new System.Drawing.Point(19, 195);
             this.BtnConfirmBasket.Name = "BtnConfirmBasket";
             this.BtnConfirmBasket.Size = new System.Drawing.Size(125, 38);
             this.BtnConfirmBasket.TabIndex = 8;
@@ -372,7 +396,7 @@ namespace PROJECT
             this.ListWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ListWeight.FormattingEnabled = true;
             this.ListWeight.ItemHeight = 18;
-            this.ListWeight.Location = new System.Drawing.Point(301, 22);
+            this.ListWeight.Location = new System.Drawing.Point(301, 49);
             this.ListWeight.Name = "ListWeight";
             this.ListWeight.Size = new System.Drawing.Size(122, 128);
             this.ListWeight.TabIndex = 2;
@@ -383,7 +407,7 @@ namespace PROJECT
             this.ListPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ListPrice.FormattingEnabled = true;
             this.ListPrice.ItemHeight = 18;
-            this.ListPrice.Location = new System.Drawing.Point(162, 22);
+            this.ListPrice.Location = new System.Drawing.Point(162, 49);
             this.ListPrice.Name = "ListPrice";
             this.ListPrice.Size = new System.Drawing.Size(122, 128);
             this.ListPrice.TabIndex = 1;
@@ -394,7 +418,7 @@ namespace PROJECT
             this.ListName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ListName.FormattingEnabled = true;
             this.ListName.ItemHeight = 18;
-            this.ListName.Location = new System.Drawing.Point(22, 22);
+            this.ListName.Location = new System.Drawing.Point(22, 49);
             this.ListName.Name = "ListName";
             this.ListName.Size = new System.Drawing.Size(122, 128);
             this.ListName.TabIndex = 0;
@@ -404,24 +428,61 @@ namespace PROJECT
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.SpringGreen;
             this.label6.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(51, 277);
+            this.label6.Location = new System.Drawing.Point(35, 305);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 24);
             this.label6.TabIndex = 6;
             this.label6.Text = "Sepet";
             // 
-            // button1
+            // label10
             // 
-            this.button1.BackColor = System.Drawing.Color.Crimson;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(334, 167);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 30);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Sepeti Kaldır";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Btn_RemoveBasket_Click);
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(19, 29);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(36, 17);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "İsim";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(159, 29);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(109, 17);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Fiyat x Miktar ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Location = new System.Drawing.Point(298, 29);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 17);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "Ağırlık";
+            // 
+            // LblWeight
+            // 
+            this.LblWeight.AutoSize = true;
+            this.LblWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblWeight.Location = new System.Drawing.Point(462, 198);
+            this.LblWeight.Name = "LblWeight";
+            this.LblWeight.Size = new System.Drawing.Size(17, 17);
+            this.LblWeight.TabIndex = 19;
+            this.LblWeight.Text = "0";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label15.Location = new System.Drawing.Point(455, 181);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(106, 17);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "Kargo Ağırlığı";
             // 
             // OrderForm
             // 
@@ -429,10 +490,9 @@ namespace PROJECT
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(890, 530);
+            this.ClientSize = new System.Drawing.Size(910, 573);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "OrderForm";
@@ -486,5 +546,10 @@ namespace PROJECT
         private System.Windows.Forms.Label LblTax;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label LblWeight;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label10;
     }
 }
