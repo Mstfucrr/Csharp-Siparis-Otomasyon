@@ -41,9 +41,14 @@ namespace PROJECT
             return TotalPrice;
             
         }
-        public void calcTotalWeight()
+        public float calcTotalWeight()
         {
-
+            float TotalWeight = 0;
+            foreach (var orderDetail in OrderDetails)
+            {
+                TotalWeight += orderDetail.CalcWeight();
+            }
+            return TotalWeight;
         }
 
         

@@ -72,7 +72,7 @@ namespace PROJECT
 
                 ListName.Items.Add(reader[1].ToString());
                 ListPrice.Items.Add(product.getPriceForQuantity() + " x " +quantity.Text);
-                ListWeight.Items.Add(product.getWeight());
+                ListWeight.Items.Add(product.getWeight()+ " x " +quantity.Text);
             }
             
             OrderDetail orderDetail = new OrderDetail();
@@ -83,6 +83,7 @@ namespace PROJECT
             LblTax.Text = order.calcTax().ToString();
             LblAmount.Text = order.calcTotal().ToString();
             LblPrice.Text = (order.calcTotal()-order.calcTax()).ToString();
+            LblWeight.Text = order.calcTotalWeight().ToString();
 
 
             if (!BtnConfirmBasket.Enabled)
@@ -105,12 +106,15 @@ namespace PROJECT
                         
                         PaymentCash cash = new PaymentCash();
                         cash.Amount = order.calcTotal();
+                        order.Payment = "Nakit";
                         MessageBox.Show(cash.PaymentCashConfirm());
                         // Sipariş db'ye eklenecek
                     }
-                    else if (comboBox1.SelectedItem.ToString() == "Kredi Kartı")
+                    else
                     {
-                        // kredi kartı formu eklenecek   
+
+                        PaymentForm paymentForm = new PaymentForm();
+                        paymentForm.Show();
                     }
                     //Ödeme yöntemi formu ve Sepete eklenenler Formu gelecek
                     // kredi kartı veya çek ödeme işlemi tamamlandıktan sonra Sipariş db'ye kaydedilecek 

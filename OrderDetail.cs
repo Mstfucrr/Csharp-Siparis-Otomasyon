@@ -32,11 +32,9 @@ namespace PROJECT
 
         public float CalcWeight()
         {
-            string DeleteString = "Select Agirlik from Products where id=" + this.ProductId;
-            SqlCommand cmd = new SqlCommand(DeleteString, db.baglanti());
-            SqlDataReader reader = cmd.ExecuteReader();
+            SqlDataReader reader = product.GetProductWithQueryandID("Agirlik", this.ProductId);
             if (reader.Read())
-                return Quantity * Convert.ToSingle(reader[4]);
+                return Quantity * Convert.ToSingle(reader[0]);
             return 1;
         }
     }
