@@ -83,6 +83,7 @@ namespace PROJECT
             orderDetail.Quantity = Convert.ToInt32(quantity.Text);
             
             order.OrderDetails.Add(orderDetail);
+            orderDetail.SaveOrderDetailsData();
             LblTax.Text = order.calcTax().ToString();
             LblAmount.Text = order.calcTotal().ToString();
             LblPrice.Text = (order.calcTotal()-order.calcTax()).ToString();
@@ -122,8 +123,9 @@ namespace PROJECT
                     {
                         order.Payment = "Kredi Kartı";
                         order.UpdateOrderDb();//ödeme yöntemi seçilip sepet onaylandığında order TotalWeight,TotalAmount,Paymet güncelleniyor   
-                        PaymentCreditForm paymentCreditForm = new PaymentCreditForm();
+                        PaymentCreditForm paymentCreditForm = new PaymentCreditForm(this.OrderId);
                         paymentCreditForm.Show();
+                        this.Close();
                     }
                     else
                     {
@@ -132,6 +134,7 @@ namespace PROJECT
 
                         PaymentCheckForm paymentCheckForm = new PaymentCheckForm();
                         paymentCheckForm.Show();
+                        this.Close();
                     }
                 }
             }
