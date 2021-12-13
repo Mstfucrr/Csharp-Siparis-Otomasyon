@@ -39,13 +39,14 @@ namespace PROJECT
             if (Payment != "")
             {
                 // Payment değeri girilmiş ise veri tabanında güncelliyor.
-                string upload = "Update Orders set Payment = @Payment,TotalWeight = @TotalWeight,TotalAmount = @TotalAmount,Status = @Status where id = @id";
+                string upload = "Update Orders set Created_date = @Created_date, Payment = @Payment,TotalWeight = @TotalWeight,TotalAmount = @TotalAmount,Status = @Status where id = @id";
                 SqlCommand cmd = new SqlCommand(upload,db.baglanti());
                 cmd.Parameters.AddWithValue("@Payment", Payment);
                 cmd.Parameters.AddWithValue("@Status", Status);
                 cmd.Parameters.AddWithValue("@TotalWeight", calcTotalWeight());
                 cmd.Parameters.AddWithValue("@TotalAmount", calcTotal());
                 cmd.Parameters.AddWithValue("@id", getOrderId());
+                cmd.Parameters.AddWithValue("@Created_date", DateTime.Now);
                 cmd.ExecuteNonQuery();
                 db.baglanti().Close();
 
