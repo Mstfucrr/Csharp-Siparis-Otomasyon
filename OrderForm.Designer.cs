@@ -50,6 +50,11 @@ namespace PROJECT
             this.TxtAd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.LblWeight = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.LblAmount = new System.Windows.Forms.Label();
@@ -63,11 +68,6 @@ namespace PROJECT
             this.ListPrice = new System.Windows.Forms.ListBox();
             this.ListName = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.LblWeight = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataSetBindingSource)).BeginInit();
@@ -290,6 +290,56 @@ namespace PROJECT
             this.panel2.Size = new System.Drawing.Size(584, 240);
             this.panel2.TabIndex = 5;
             // 
+            // LblWeight
+            // 
+            this.LblWeight.AutoSize = true;
+            this.LblWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblWeight.Location = new System.Drawing.Point(462, 198);
+            this.LblWeight.Name = "LblWeight";
+            this.LblWeight.Size = new System.Drawing.Size(17, 17);
+            this.LblWeight.TabIndex = 19;
+            this.LblWeight.Text = "0";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label15.Location = new System.Drawing.Point(455, 181);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(106, 17);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "Kargo Ağırlığı";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Location = new System.Drawing.Point(298, 29);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 17);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "Ağırlık";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(159, 29);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(109, 17);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Fiyat x Miktar ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(19, 29);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(36, 17);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "İsim";
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Crimson;
@@ -434,56 +484,6 @@ namespace PROJECT
             this.label6.TabIndex = 6;
             this.label6.Text = "Sepet";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(19, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 17);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "İsim";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(159, 29);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 17);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Fiyat x Miktar ";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(298, 29);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 17);
-            this.label13.TabIndex = 17;
-            this.label13.Text = "Ağırlık";
-            // 
-            // LblWeight
-            // 
-            this.LblWeight.AutoSize = true;
-            this.LblWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblWeight.Location = new System.Drawing.Point(462, 198);
-            this.LblWeight.Name = "LblWeight";
-            this.LblWeight.Size = new System.Drawing.Size(17, 17);
-            this.LblWeight.TabIndex = 19;
-            this.LblWeight.Text = "0";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.Location = new System.Drawing.Point(455, 181);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(106, 17);
-            this.label15.TabIndex = 18;
-            this.label15.Text = "Kargo Ağırlığı";
-            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,7 +498,6 @@ namespace PROJECT
             this.Name = "OrderForm";
             this.Text = "Sipariş";
             this.Load += new System.EventHandler(this.OrderForm_Load);
-            this.Click += new System.EventHandler(this.Btn_RemoveBasket_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataSetBindingSource)).EndInit();
