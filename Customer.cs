@@ -18,9 +18,7 @@ namespace PROJECT
 
         public DataTable GetCustomers()
         {
-            string get = "Select Ad,Soyad,Adres,Eposta,Created_date From Customers";
-            SqlCommand cmd = new SqlCommand(get, db.baglanti());
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            SqlDataAdapter da = new SqlDataAdapter("Select Ad,Soyad,Adres,Eposta,Created_date From Customers",db.baglanti());
             DataTable dt = new DataTable();
             da.Fill(dt);
             db.baglanti().Close();
