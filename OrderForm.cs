@@ -132,7 +132,7 @@ namespace PROJECT
                         order.Payment = "Çek";
                         order.UpdateOrderDb();//ödeme yöntemi seçilip sepet onaylandığında order TotalWeight,TotalAmount,Paymet güncelleniyor   
 
-                        PaymentCheckForm paymentCheckForm = new PaymentCheckForm();
+                        PaymentCheckForm paymentCheckForm = new PaymentCheckForm(this.OrderId);
                         paymentCheckForm.Show();
                         this.Close();
                     }
