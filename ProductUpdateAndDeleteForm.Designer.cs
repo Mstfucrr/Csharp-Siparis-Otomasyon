@@ -31,8 +31,6 @@ namespace PROJECT
         {
             this.components = new System.ComponentModel.Container();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productDataSet = new PROJECT.ProductDataSet();
-            this.productsTableAdapter = new PROJECT.ProductDataSetTableAdapters.ProductsTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnDelete_Product = new System.Windows.Forms.Button();
@@ -47,24 +45,9 @@ namespace PROJECT
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this.productDataSet;
-            // 
-            // productDataSet
-            // 
-            this.productDataSet.DataSetName = "ProductDataSet";
-            this.productDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productsTableAdapter
-            // 
-            this.productsTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -217,7 +200,6 @@ namespace PROJECT
             this.Text = "Ürün Güncelleme Ve Silme";
             this.Load += new System.EventHandler(this.ProductUpdateAndDeleteForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -227,9 +209,7 @@ namespace PROJECT
         }
 
         #endregion
-        private ProductDataSet productDataSet;
         private System.Windows.Forms.BindingSource productsBindingSource;
-        private ProductDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnDelete_Product;

@@ -32,10 +32,8 @@ namespace PROJECT
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.productDataSet = new PROJECT.ProductDataSet();
             this.productDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsTableAdapter = new PROJECT.ProductDataSetTableAdapters.ProductsTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.quantity = new System.Windows.Forms.ComboBox();
@@ -69,7 +67,6 @@ namespace PROJECT
             this.ListName = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
@@ -87,25 +84,6 @@ namespace PROJECT
             this.dataGridView1.Size = new System.Drawing.Size(249, 239);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectShowProductDetail);
-            // 
-            // productDataSet
-            // 
-            this.productDataSet.DataSetName = "ProductDataSet";
-            this.productDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productDataSetBindingSource
-            // 
-            this.productDataSetBindingSource.DataSource = this.productDataSet;
-            this.productDataSetBindingSource.Position = 0;
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this.productDataSet;
-            // 
-            // productsTableAdapter
-            // 
-            this.productsTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -499,7 +477,6 @@ namespace PROJECT
             this.Text = "Sipariş";
             this.Load += new System.EventHandler(this.OrderForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -514,10 +491,8 @@ namespace PROJECT
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private ProductDataSet productDataSet;
         private System.Windows.Forms.BindingSource productDataSetBindingSource;
         private System.Windows.Forms.BindingSource productsBindingSource;
-        private ProductDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnAdd_Basket;
