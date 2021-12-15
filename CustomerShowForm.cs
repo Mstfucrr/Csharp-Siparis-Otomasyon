@@ -29,7 +29,7 @@ namespace PROJECT
                 CustomerOrderShowForm showForm = new CustomerOrderShowForm(CustomerId);
                 showForm.Show();
             }
-            catch (Exception exception)
+            catch (Exception)
             { }
 
 
