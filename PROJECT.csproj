@@ -48,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -74,6 +76,12 @@
     <Compile Include="AdminLoginForm.Designer.cs">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerOrderShowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerOrderShowForm.Designer.cs">
+      <DependentUpon>CustomerOrderShowForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,11 +104,6 @@
     </Compile>
     <Compile Include="PaymentCredit.cs" />
     <Compile Include="Customer.cs" />
-    <Compile Include="CustomerDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="CustomerLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,11 +133,6 @@
       <DependentUpon>PaymentCreditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Product.cs" />
-    <Compile Include="ProductDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProductDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ProductUpdateAndDeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerLoginForm.resx">
       <DependentUpon>CustomerLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerOrderShowForm.resx">
+      <DependentUpon>CustomerOrderShowForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerShowForm.resx">
       <DependentUpon>CustomerShowForm.cs</DependentUpon>
@@ -192,28 +193,6 @@
       <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
-    <None Include="CustomerDataSet.xsc">
-      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CustomerDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CustomerDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CustomerDataSet.xss">
-      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ProductDataSet.xsc">
-      <DependentUpon>ProductDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ProductDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProductDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProductDataSet.xss">
-      <DependentUpon>ProductDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
