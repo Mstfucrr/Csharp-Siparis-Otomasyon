@@ -9,17 +9,11 @@ namespace PROJECT
     {
         public SqlConnection baglanti()
         {
-            string conString = @"Data Source=LAPTOP-DM5KL2SF\SQLEXPRESS;Initial Catalog=OrderDatabase;Integrated Security=True";
+            string conString = @"Data Source=MSTFUCR\SQLEXPRESS01;Initial Catalog=OrderDatabase;Integrated Security=True";
             SqlConnection con = new SqlConnection(conString);
             con.Open();
             //Data Source=LAPTOP-DM5KL2SF\SQLEXPRESS;Initial Catalog=OrderDatabase;Integrated Security=True
             return con;
         }
-          
-         
-
-
-        
-
     }
 }
