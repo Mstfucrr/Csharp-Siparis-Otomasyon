@@ -18,7 +18,7 @@ namespace PROJECT
 
         public DataTable GetCustomers()
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select Ad,Soyad,Adres,Eposta,Created_date From Customers",db.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select id,Ad,Soyad,Adres,Eposta,Created_date From Customers",db.baglanti());
             DataTable dt = new DataTable();
             da.Fill(dt);
             db.baglanti().Close();
