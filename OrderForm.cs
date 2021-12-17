@@ -114,8 +114,6 @@ namespace PROJECT
                         PaymentCash cash = new PaymentCash();
                         cash.Amount = order.calcTotal();
                         MessageBox.Show(cash.PaymentCashConfirm());
-                        OrderForm form = new OrderForm(order.CustomerId);
-                        form.Show();
                         this.Close();
                         // Sipariş db'ye eklenecek
                     }
