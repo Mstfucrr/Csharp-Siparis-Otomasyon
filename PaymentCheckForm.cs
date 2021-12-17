@@ -23,6 +23,7 @@ namespace PROJECT
                 check.checkOwner = TxtCreditName.Text;
                 MessageBox.Show(check.Authorized());
                 OrderDbStatusUpdate();
+                this.Close();
             }
         }
 
