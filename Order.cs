@@ -13,7 +13,7 @@ namespace PROJECT
         public string Payment { get; set; }
         public List<OrderDetail> OrderDetails;
         private DB db = new DB();
-        
+
         public Order(int CustomerID)
         {
             this.CustomerId = CustomerID;
@@ -46,7 +46,7 @@ namespace PROJECT
                 cmd.Parameters.AddWithValue("@TotalWeight", calcTotalWeight());
                 cmd.Parameters.AddWithValue("@TotalAmount", calcTotal());
                 cmd.Parameters.AddWithValue("@id", getOrderId());
-                cmd.Parameters.AddWithValue("@Created_date", DateTime.Now);
+                cmd.Parameters.AddWithValue("@Created_date", this.Date);
                 cmd.ExecuteNonQuery();
                 db.baglanti().Close();
 

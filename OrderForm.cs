@@ -109,6 +109,7 @@ namespace PROJECT
                     {
                         order.Payment = "Nakit";
                         order.Status = true;
+                        order.Date = DateTime.Now;
                         order.UpdateOrderDb();//ödeme yöntemi seçilip sepet onaylandığında order TotalWeight,TotalAmount,Paymet güncelleniyor   
 
                         PaymentCash cash = new PaymentCash();
@@ -120,6 +121,7 @@ namespace PROJECT
                     else if (comboBox1.SelectedItem.ToString() == "Kredi Kartı")
                     {
                         order.Payment = "Kredi Kartı";
+                        order.Date = DateTime.Now;
                         order.UpdateOrderDb();//ödeme yöntemi seçilip sepet onaylandığında order TotalWeight,TotalAmount,Paymet güncelleniyor   
                         PaymentCreditForm paymentCreditForm = new PaymentCreditForm(this.OrderId);
                         paymentCreditForm.Show();
@@ -128,6 +130,7 @@ namespace PROJECT
                     else
                     {
                         order.Payment = "Çek";
+                        order.Date = DateTime.Now;
                         order.UpdateOrderDb();//ödeme yöntemi seçilip sepet onaylandığında order TotalWeight,TotalAmount,Paymet güncelleniyor   
 
                         PaymentCheckForm paymentCheckForm = new PaymentCheckForm(this.OrderId);
