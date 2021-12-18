@@ -27,11 +27,12 @@
   <Class Name="PROJECT.OrderDetail">
     <Position X="8.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAACAAiAAAAAAAAAAAAAAAAAAAAAAAAAAkABAAAA=</HashCode>
+      <HashCode>EQAAAACAAiAQAAABAAAAAAAAIAAAAAAAAAAAkABAAAA=</HashCode>
       <FileName>OrderDetail.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="product" />
+      <Field Name="db" />
     </ShowAsAssociation>
   </Class>
   <Class Name="PROJECT.Order">
@@ -52,21 +53,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PROJECT.PaymentCash">
-    <Position X="3.25" Y="7.25" Width="1.75" />
+    <Position X="3.25" Y="8" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAIAAAAA=</HashCode>
       <FileName>PaymentCash.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PROJECT.PaymentCheck">
-    <Position X="6" Y="7.5" Width="1.5" />
+    <Position X="6" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>PaymentCheck.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PROJECT.PaymentCredit">
-    <Position X="1" Y="7.25" Width="1.5" />
+    <Position X="1" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAUAAAA=</HashCode>
       <FileName>PaymentCredit.cs</FileName>
