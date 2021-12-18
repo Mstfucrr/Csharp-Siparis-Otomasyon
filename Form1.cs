@@ -19,24 +19,32 @@ namespace PROJECT
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            CustomerRegisterForm registerForm = new CustomerRegisterForm();
-            registerForm.Show();
 
+            LoadForm(new CustomerRegisterForm());
+            
         }
 
+        private void LoadForm(Form f)
+        {
+            if (PanelForm.Controls.Count > 0)
+                PanelForm.Controls.RemoveAt(0);
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            PanelForm.Controls.Add(f);
+            f.Show();
+        }
        
 
         private void BtnCustomerLogin_Click(object sender, EventArgs e)
         {
-            CustomerLoginForm customerLoginForm = new CustomerLoginForm();
-            customerLoginForm.Show();
+            LoadForm(new CustomerLoginForm());
 
         }
 
         private void BtnControl_Panel_Click(object sender, EventArgs e)
         {
-            AdminLoginForm adminLoginForm = new AdminLoginForm();
-            adminLoginForm.Show();
+            LoadForm(new AdminLoginForm());
         }
 
         private void Btn_Quit_Click(object sender, EventArgs e)
