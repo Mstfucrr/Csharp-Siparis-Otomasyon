@@ -47,11 +47,6 @@ namespace PROJECT
 
                 int OrderId = Convert.ToInt32(row.Cells[0].Value);
 
-                if (OrderId == 58)
-                {
-                    MessageBox.Show("Test");
-                }
-
                 string join = "from OrderDetails inner join Orders " +
                               "on OrderDetails.OrderId = Orders.id inner join Products " +
                               "on OrderDetails.ProductId = Products.id inner join Customers " +
