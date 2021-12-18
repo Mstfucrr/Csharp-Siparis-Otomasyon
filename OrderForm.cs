@@ -35,22 +35,25 @@ namespace PROJECT
         {
             if (!BtnAdd_Basket.Enabled)
                 BtnAdd_Basket.Enabled = true;
-            if (e.RowIndex >= 0)
+
+            try
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex]; // seçilen satır
 
                 Productid = Convert.ToInt32(row.Cells[0].Value);// seçilen product'ın id'si
-                
-                SqlDataReader reader = product.GetProductWithQueryandID("*",Productid);
+
+                SqlDataReader reader = product.GetProductWithQueryandID("*", Productid);
                 if (reader.Read())
                 {
                     TxtAd.Text = reader[1].ToString();
                     TxtFiyat.Text = Convert.ToSingle(reader[2]).ToString();
                     TxtTanim.Text = reader[3].ToString();
                     TxtAgirlik.Text = reader[4].ToString();
-
                 }
             }
+            catch (Exception)
+            { }
+            
         }
 
         private void Btn_RemoveBasket_Click(object sender, EventArgs e)
