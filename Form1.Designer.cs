@@ -80,7 +80,7 @@ namespace PROJECT
             this.BtnControl_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnControl_Panel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnControl_Panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnControl_Panel.ForeColor = System.Drawing.Color.Aquamarine;
+            this.BtnControl_Panel.ForeColor = System.Drawing.Color.Red;
             this.BtnControl_Panel.Location = new System.Drawing.Point(3, 105);
             this.BtnControl_Panel.Name = "BtnControl_Panel";
             this.BtnControl_Panel.Size = new System.Drawing.Size(206, 47);
