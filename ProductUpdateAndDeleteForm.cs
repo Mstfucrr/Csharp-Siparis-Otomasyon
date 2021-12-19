@@ -28,7 +28,7 @@ namespace PROJECT
         int id;
         private void SelectProduct(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            try
             {
                 if (!BtnDelete_Product.Enabled && !BtnUpdate_Product.Enabled)
                 {
@@ -43,6 +43,8 @@ namespace PROJECT
                 TxtTanim.Text = row.Cells[3].Value.ToString();
 
             }
+            catch (Exception)
+            { }
 
         }
 
