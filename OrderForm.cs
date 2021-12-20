@@ -105,7 +105,7 @@ namespace PROJECT
             if (comboBox1.SelectedIndex >= 0)
             {
                 DialogResult dialogResult = MessageBox.Show(comboBox1.SelectedItem+" ödeme\nÖdenecek tutar : "+order.calcTotal()+"\nSepeti onaylıyor musunuz ?", "Onay", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes && comboBox1.SelectedIndex >= 0)
+                if (dialogResult == DialogResult.Yes)
                 {
                     //ödeme yöntemi seçilip sepet onaylandığında order TotalWeight,TotalAmount,Paymet güncelleniyor   
                     if (comboBox1.SelectedItem.ToString() == "Nakit")
@@ -139,6 +139,7 @@ namespace PROJECT
                         PaymentCheckForm paymentCheckForm = new PaymentCheckForm(this.OrderId);
                         paymentCheckForm.Show();
                         this.Close();
+
                     }
                 }
             }
