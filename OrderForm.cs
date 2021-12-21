@@ -91,7 +91,7 @@ namespace PROJECT
             LblTax.Text = order.calcTax().ToString();//BirimFiyat * Miktar * Vergi 
             LblPrice.Text = (order.calcTotal()-order.calcTax()).ToString(); //BirimFiyat * Miktar
             LblAmount.Text = order.calcTotal().ToString(); // BirimFiyat * Miktar * Vergi  + BirimFiyat * Miktar 
-            LblWeight.Text = order.calcTotalWeight().ToString();// Miktar * Ağırlık
+            LblWeight.Text = order.calcTotalWeight().ToString(); // Miktar * Ağırlık
 
 
             if (!BtnConfirmBasket.Enabled)
