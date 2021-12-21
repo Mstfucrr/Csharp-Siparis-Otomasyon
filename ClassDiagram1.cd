@@ -25,18 +25,18 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PROJECT.OrderDetail">
-    <Position X="8.25" Y="6.25" Width="1.5" />
+    <Position X="8.25" Y="6.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>EQAAAACAAiAQAAABAAAAAAAAIAAAAAAAAAAAkABAAAA=</HashCode>
       <FileName>OrderDetail.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="product" />
       <Field Name="db" />
+      <Field Name="product" />
     </ShowAsAssociation>
   </Class>
   <Class Name="PROJECT.Order">
-    <Position X="8.25" Y="1.75" Width="1.5" />
+    <Position X="8.25" Y="1.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AEAAAAAEAAAQIAAAAJAARAAACAAAABABAAAAAAAAAAA=</HashCode>
       <FileName>Order.cs</FileName>
