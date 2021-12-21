@@ -29,9 +29,7 @@ namespace PROJECT
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnDelete_Product = new System.Windows.Forms.Button();
@@ -45,7 +43,6 @@ namespace PROJECT
             this.TxtAd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +73,7 @@ namespace PROJECT
             this.panel1.Font = new System.Drawing.Font("Bahnschrift Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panel1.Location = new System.Drawing.Point(6, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 350);
+            this.panel1.Size = new System.Drawing.Size(272, 350);
             this.panel1.TabIndex = 2;
             // 
             // BtnDelete_Product
@@ -111,7 +108,7 @@ namespace PROJECT
             this.TxtTanim.Location = new System.Drawing.Point(49, 225);
             this.TxtTanim.Multiline = true;
             this.TxtTanim.Name = "TxtTanim";
-            this.TxtTanim.Size = new System.Drawing.Size(185, 76);
+            this.TxtTanim.Size = new System.Drawing.Size(200, 76);
             this.TxtTanim.TabIndex = 7;
             // 
             // label5
@@ -129,7 +126,7 @@ namespace PROJECT
             this.TxtAgirlik.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAgirlik.Location = new System.Drawing.Point(49, 164);
             this.TxtAgirlik.Name = "TxtAgirlik";
-            this.TxtAgirlik.Size = new System.Drawing.Size(185, 27);
+            this.TxtAgirlik.Size = new System.Drawing.Size(200, 27);
             this.TxtAgirlik.TabIndex = 5;
             // 
             // label4
@@ -147,7 +144,7 @@ namespace PROJECT
             this.TxtFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtFiyat.Location = new System.Drawing.Point(49, 106);
             this.TxtFiyat.Name = "TxtFiyat";
-            this.TxtFiyat.Size = new System.Drawing.Size(185, 27);
+            this.TxtFiyat.Size = new System.Drawing.Size(200, 27);
             this.TxtFiyat.TabIndex = 3;
             // 
             // label3
@@ -165,7 +162,7 @@ namespace PROJECT
             this.TxtAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAd.Location = new System.Drawing.Point(49, 45);
             this.TxtAd.Name = "TxtAd";
-            this.TxtAd.Size = new System.Drawing.Size(185, 27);
+            this.TxtAd.Size = new System.Drawing.Size(200, 27);
             this.TxtAd.TabIndex = 1;
             // 
             // label2
@@ -180,6 +177,8 @@ namespace PROJECT
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Aquamarine;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -191,9 +190,9 @@ namespace PROJECT
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(285, 26);
+            this.dataGridView1.Location = new System.Drawing.Point(284, 26);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(627, 350);
+            this.dataGridView1.Size = new System.Drawing.Size(627, 363);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectProduct);
             // 
@@ -202,14 +201,13 @@ namespace PROJECT
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
-            this.ClientSize = new System.Drawing.Size(924, 390);
+            this.ClientSize = new System.Drawing.Size(923, 403);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "ProductUpdateAndDeleteForm";
             this.Text = "Ürün Güncelleme Ve Silme";
             this.Load += new System.EventHandler(this.ProductUpdateAndDeleteForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -219,7 +217,6 @@ namespace PROJECT
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource productsBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnDelete_Product;
