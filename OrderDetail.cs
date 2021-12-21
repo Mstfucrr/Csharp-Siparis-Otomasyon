@@ -9,8 +9,8 @@ namespace PROJECT
     {
         public int Quantity { get; set; }
         public float TaxStatus = 0.18F;
-        public int ProductId;
-        public int OrderId;
+        public int ProductId { get; set; }
+        public int OrderId { get; set; }
         private Product product = new Product();
         private DB db = new DB();
 
@@ -26,8 +26,7 @@ namespace PROJECT
 
         }
 
-        public OrderDetail()
-        { }
+        
 
         public void DeleteOrderDetailsFromDb()
         {
