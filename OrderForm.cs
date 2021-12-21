@@ -79,18 +79,19 @@ namespace PROJECT
                 ListWeight.Items.Add(product.getWeight()+ " x " +quantity.Text);
             }
 
-            OrderId = order.getOrderId();
+            OrderId = order.getOrderId();//order detail için bu order'in id'sini çeker
 
             OrderDetail orderDetail = new OrderDetail(OrderId);
             orderDetail.ProductId = Productid;
             orderDetail.Quantity = Convert.ToInt32(quantity.Text);
             
             order.OrderDetails.Add(orderDetail);
+
             orderDetail.SaveOrderDetailsData();
-            LblTax.Text = order.calcTax().ToString();
-            LblAmount.Text = order.calcTotal().ToString();
-            LblPrice.Text = (order.calcTotal()-order.calcTax()).ToString();
-            LblWeight.Text = order.calcTotalWeight().ToString();
+            LblTax.Text = order.calcTax().ToString();//BirimFiyat * Miktar * Vergi 
+            LblPrice.Text = (order.calcTotal()-order.calcTax()).ToString(); //BirimFiyat * Miktar
+            LblAmount.Text = order.calcTotal().ToString(); // BirimFiyat * Miktar * Vergi  + BirimFiyat * Miktar 
+            LblWeight.Text = order.calcTotalWeight().ToString();// Miktar * Ağırlık
 
 
             if (!BtnConfirmBasket.Enabled)
