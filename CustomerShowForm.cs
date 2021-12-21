@@ -16,7 +16,8 @@ namespace PROJECT
         {
             Customer customer = new Customer();
             dataGridView1.DataSource = customer.GetCustomers();
-             
+            dataGridView1.Columns[5].HeaderText = "Kayıt Tarihi";
+
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
