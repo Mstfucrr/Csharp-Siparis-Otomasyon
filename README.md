@@ -32,21 +32,21 @@ Müşteri için:
   <img width="460" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/AnaMenü.JPG">
 </p>
 
-<img width="460" align="left" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/KayıtOl.JPG">
-<img width="460" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/MüşteriGiriş.JPG">
+<img width="600" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/KayıtOl.JPG">
+<img width="600" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/MüşteriGiriş.JPG">
 
 <img width="650" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/SiparişEkranı.JPG">
 <img width="650" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/SiparişEkranı2.JPG">
 
-<img width="460" align="left" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/KrediKartıÖdeme.JPG">
-<img width="460" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/KrediKartıÖdeme2.JPG">
+<img width="600" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/KrediKartıÖdeme.JPG">
+<img width="600" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/KrediKartıÖdeme2.JPG">
 
 <img width="300" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/ÇekÖdeme.JPG">
 
 <img width="700" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/MüşteriÖncekiSiparişler.JPG">
 
 <p align="center">
-  <img width="460" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/AdminGiriş.JPG">
+  <img width="500" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/AdminGiriş.JPG">
 </p>
 
 <img width="500" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/MüşterileriGörüntüleme.JPG">
