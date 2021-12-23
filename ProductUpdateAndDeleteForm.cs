@@ -16,10 +16,8 @@ namespace PROJECT
             dataGridView1.DataSource = product.GetProducts("*");
             // TODO: Bu kod satırı 'productDataSet.Products' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             //this.productsTableAdapter.Fill(this.productDataSet.Products);
-            DataGridViewColumn idcolumn = dataGridView1.Columns[0];
-            idcolumn.Width = 30;
-            DataGridViewColumn dateColumn = dataGridView1.Columns[5];
-            dateColumn.HeaderText = "Eklenme Tarihi";
+            dataGridView1.Columns[0].Width = 30;
+            dataGridView1.Columns[5].HeaderText = "Eklenme Tarihi";
             BtnDelete_Product.Enabled = false;
             BtnUpdate_Product.Enabled = false;
 
