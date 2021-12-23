@@ -10,12 +10,14 @@ namespace PROJECT
         public DB db;
         public int OrderId { get; set; }
         Product product = new Product();
+        public int CustomerId { get; private set; }
 
         public OrderForm(int customerId)
         {
             InitializeComponent();
             order = new Order(customerId);
             db = new DB();
+            this.CustomerId = customerId;
         }
 
         private void OrderForm_Load(object sender, EventArgs e)
@@ -150,6 +152,12 @@ namespace PROJECT
             }
             
             
+        }
+
+        private void Btn_SelfOrder_Click(object sender, EventArgs e)
+        {
+            CustomerSelfOrderForm selfOrderForm = new CustomerSelfOrderForm(CustomerId);
+            selfOrderForm.Show();
         }
     }
 }
