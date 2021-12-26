@@ -121,7 +121,10 @@ namespace PROJECT
                         PaymentCash cash = new PaymentCash();
                         cash.Amount = order.calcTotal();
                         MessageBox.Show(cash.PaymentCashConfirm());
+                        OrderForm form = new OrderForm(order.CustomerId);
+                        form.Show();
                         this.Close();
+
                         // Sipariş db'ye eklenecek
                     }
                     else if (comboBox1.SelectedItem.ToString() == "Kredi Kartı")
@@ -129,9 +132,10 @@ namespace PROJECT
                         order.Payment = "Kredi Kartı";
                         order.Date = DateTime.Now;
                         order.UpdateOrderDb();//ödeme yöntemi seçilip sepet onaylandığında order TotalWeight,TotalAmount,Paymet güncelleniyor   
-                        PaymentCreditForm paymentCreditForm = new PaymentCreditForm(this.OrderId);
+                        PaymentCreditForm paymentCreditForm = new PaymentCreditForm(this.OrderId,this.CustomerId);
                         paymentCreditForm.Show();
                         this.Close();
+                        
                     }
                     else
                     {
@@ -139,7 +143,7 @@ namespace PROJECT
                         order.Date = DateTime.Now;
                         order.UpdateOrderDb();//ödeme yöntemi seçilip sepet onaylandığında order TotalWeight,TotalAmount,Paymet güncelleniyor   
 
-                        PaymentCheckForm paymentCheckForm = new PaymentCheckForm(this.OrderId);
+                        PaymentCheckForm paymentCheckForm = new PaymentCheckForm(this.OrderId,this.CustomerId);
                         paymentCheckForm.Show();
                         this.Close();
 

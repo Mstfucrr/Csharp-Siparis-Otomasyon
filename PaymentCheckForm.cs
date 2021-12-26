@@ -7,10 +7,13 @@ namespace PROJECT
     public partial class PaymentCheckForm : Form
     {
         public int OrderId { get; set; }
-        public PaymentCheckForm(int orderid)
+        private int CustomerId { get; set; }
+
+        public PaymentCheckForm(int orderid,int customerId)
         {
             InitializeComponent();
             this.OrderId = orderid;
+            this.CustomerId = customerId;
         }
 
         private void BtnBuy_Click(object sender, System.EventArgs e)
@@ -24,6 +27,8 @@ namespace PROJECT
                 MessageBox.Show(check.Authorized());
                 OrderDbStatusUpdate();
                 this.Close();
+                OrderForm orderForm = new OrderForm(CustomerId);
+                orderForm.Show();
             }
         }
 

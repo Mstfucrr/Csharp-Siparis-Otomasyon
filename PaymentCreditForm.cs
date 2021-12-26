@@ -14,10 +14,12 @@ namespace PROJECT
     public partial class PaymentCreditForm : Form
     {
         private int OrderId { get; set; }
-        public PaymentCreditForm(int orderId)
+        private int CustomerId { get; set; }
+        public PaymentCreditForm(int orderId,int CustomerId)
         {
             InitializeComponent();
             this.OrderId = orderId;
+            this.CustomerId = CustomerId;
         }
 
         private void TxtCardName_TextChanged(object sender, EventArgs e)
@@ -91,6 +93,8 @@ namespace PROJECT
                 OrderDbStatusUpdate();
 
                 this.Close();
+                OrderForm orderForm = new OrderForm(CustomerId);
+                orderForm.Show();
             }
         }
 
