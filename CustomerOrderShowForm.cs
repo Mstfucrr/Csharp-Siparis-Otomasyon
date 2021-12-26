@@ -34,8 +34,17 @@ namespace PROJECT
             dataGridView1.Columns[3].HeaderText = "Ödeme Yöntemi";
             dataGridView1.Columns[4].HeaderText = "Sipariş Tarihi";
 
-            db.baglanti().Close();
+            try
+            {
+                if (dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[3].Value.ToString() == "")
+                {
+                    dataGridView1.Rows.RemoveAt(dataGridView1.Rows.Count - 1);
+                }
+            }
+            catch (Exception)
+            {}
 
+            db.baglanti().Close();
 
         }
 
