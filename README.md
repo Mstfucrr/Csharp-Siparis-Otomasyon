@@ -2,31 +2,38 @@
 
 Amacı: 
     
-    -Kolay ve güvenli kullanım ile bir müşterinin alışveriş yapabilmesi.
+    - Kolay ve güvenli kullanım ile bir müşterinin alışveriş yapabilmesi.
 
 Kapsamı:
 
 Admin için:
       
-    -Müşterileri görüntüleme
+    - Müşterileri görüntüleme
 
-    -Müşterilerin daha önce verdiği siparişlerinin 
+    - Müşterilerin daha önce verdiği siparişlerinin 
     (Ödeme tutarı ,Kargo ağırlığı ,Ödeme Yöntemini (nakit ,kredi kartı ,çek) ,Tarihi ) 
     takibini detaylı (Ürün Adı ,Miktarı) bir şekilde yapabilme.
 
-    -Ürün (ekleme ,kaldırma ,güncelleme) 
+    - Ürün (ekleme ,kaldırma ,güncelleme) 
 
 Müşteri için:
   
-    -Ürünlerin detaylarını görüntüleme ve
+    - Ürünlerin detaylarını görüntüleme ve
     detaylarını görüntülediği üründen istediği miktarda sepete ekleyip
     sipariş verebilme 
     
-    -istediği ödeme yöntemiyle (nakit ,kredi kartı ,çek) ödeyebilme 
+    - istediği ödeme yöntemiyle (nakit ,kredi kartı ,çek) ödeyebilme 
 	
 İşlemlerini gerçekleştiren bir ara yüze sahip Windows form Sipariş otomasyon uygulaması.
-	
 
+Gereksinimler :
+
+    - .net framework 4.8 targeting pack
+    - SQLexpress (mssql)
+
+<p align="center">
+  <img src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/ClassDiagram.jpg">
+</p>
 
 <p align="center">
   <img width="460" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/AnaMenü.JPG">
