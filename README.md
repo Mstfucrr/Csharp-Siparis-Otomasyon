@@ -27,6 +27,9 @@ Müşteri için:
 İşlemlerini gerçekleştiren bir ara yüze sahip Windows form Sipariş otomasyon uygulaması.
 	
 
+<p align="center">
+  <img src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/ClassDiagram.jpg">
+</p>
 
 <p align="center">
   <img width="460" src="https://github.com/Mstfucrr/ScreenShoots/blob/main/Ekran%20Görüntüleri/AnaMenü.JPG">
